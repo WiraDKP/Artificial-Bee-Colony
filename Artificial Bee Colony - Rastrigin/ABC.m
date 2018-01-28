@@ -52,7 +52,7 @@ function [bestbee, mincost] = ABC(problem, nvar, bound, param)
             K = [1:i-1 i+1:npop];
             k = K(randi([1 length(K)]));
             
-            phi = a*unifrnd(-1,1,nvar);
+            phi = a*unifrnd(-1,1,varsize);
             
             newbee.loc = min(max(bee(i).loc + phi.*(bee(i).loc-bee(k).loc), xmin),xmax);
             newbee.cost = func(newbee.loc);
@@ -91,7 +91,7 @@ function [bestbee, mincost] = ABC(problem, nvar, bound, param)
             K = [1:i-1 i+1:npop];
             k = K(randi([1 length(K)]));
             
-            phi = a*unifrnd(-1,1,nvar);
+            phi = a*unifrnd(-1,1,varsize);
             
             newbee.loc = min(max(bee(j).loc + phi.*(bee(j).loc-bee(k).loc), xmin),xmax);
             newbee.cost = func(newbee.loc);

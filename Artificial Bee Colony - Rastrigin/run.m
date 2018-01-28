@@ -9,7 +9,7 @@ bound.xmax = 5;
 bound.acc = 1;
 
 param.itermax = 50;
-param.npop = 45;
+param.npop = 46;
 
 ABC(problem, nvar, bound, param)
 
